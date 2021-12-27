@@ -1,0 +1,55 @@
+/*
+#9FE4F4 - 1
+#CECECE - 2
+#575757 - 3
+#333333 - 4
+#EFBB40 - 5
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Source Code Pro', monospace;
+    background: #333333;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    color: #575757;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.title{
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.perfil-imagem{
+    border-radius: 10%;
+    margin: auto;
+}
+
+.perfil-box span {
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+.perfil-box p {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.perfil-box{
+    background: #CECECE;
+    padding: 2rem;
+    box-shadow: 2px 2px 16px rgba(0,0,0,0.16);
+    border-radius: 50px;
+    text-align: center;
+}
