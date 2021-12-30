@@ -9,12 +9,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Source Code Pro', monospace;
+    scroll-behavior: smooth;
 }
 /* ----------------------------- nav bar ---------------------------*/
 nav {
     display: flex;
     position: fixed;
-    top: 10px;
     width: 100%;
     justify-content: center;
     z-index: 1000;
@@ -96,10 +96,9 @@ nav {
 
     .nav-list {
         position: absolute;
-        top: 10vh;
         right: 0;
         width: 25vw;
-        height: 90vh;
+        height: 100vh;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -120,6 +119,11 @@ nav {
 
 .nav-list.active {
     transform: translateX(0);
+}
+
+.mobile-menu.active {
+    background: #333333;
+    z-index: 1000;
 }
 
 .mobile-menu.active .line1 {
@@ -178,7 +182,7 @@ section{
 .text-perfil {
     margin: 50px;
     text-align: justify;
-    color: #CECECE
+    color: #CECECE;
 }
 
 .logo-text {
@@ -220,22 +224,26 @@ section{
 .title {
     width: 100%;
     text-align: left;
-    margin-left: 25px;
 }
 
 .title h2 {
-    position: relative;
+    position: absolute;
     color: #9FE4F4;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 700;
+    margin: 5px;
+    padding: 2px;
+    background: #575757;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.title p {
+.sobre .title p {
     max-width: 1000px;
     display: inline-block;
     color: #333333;
-    margin-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .title h2::before {
@@ -253,4 +261,206 @@ section{
     background: #CECECE;
 }
 
+.sobre .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.sobre .content .text-box {
+    min-width: 70%;
+    width: 70%;
+}
+
+.sobre .content .text-box p {
+    padding: 15px;
+    text-align: justify;
+    color: #333333;
+    margin-left: 40px;
+}
+
+.sobre .content .img-box {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sobre .content .img-box img {
+    max-width: 100%;
+}
 /* ----------------------------- fim da section sobre --------------------------*/
+/* ----------------------------- section habilidades --------------------------*/
+.habilidades {
+    background: #333333;
+}
+
+.habilidades .title p {
+    max-width: 1000px;
+    display: inline-block;
+    color: #CECECE;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.habilidades .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.habilidades .content .habilidades-box {
+    padding: 40px 50px;
+    max-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+    text-align: center;
+    background: #CECECE;
+    border-radius: 50px;
+}
+
+.habilidades .content .habilidades-box:hover {
+    background: #575757;
+}
+
+.habilidades .content .habilidades-box img {
+    max-width: 80px;
+    transition: 0.5s;
+}
+
+.habilidades .content .habilidades-box:hover img {
+    filter: invert(1);
+}
+
+.habilidades .content .habilidades-box h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.habilidades .content .habilidades-box:hover h2 {
+    filter: invert(1);
+}
+
+.habilidades .content .habilidades-box p {
+    margin: 0;
+    transition: 0.5s;
+}
+
+.habilidades .content .habilidades-box:hover p {
+    filter: invert(1);
+}
+/* ----------------------------- fim da section habilidades-------------------*/
+/* -----------------------------section trabalhos----------------------------*/
+
+.trabalhos {
+    background: #CECECE;
+}
+
+.trabalhos .title p {
+    max-width: 1000px;
+    display: inline-block;
+    color: #333333;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.trabalhos .card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    margin: 30px 50px 30px 50px;
+    transition: 0.5;
+}
+
+.trabalhos .card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.trabalhos .card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9FE4F4;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.trabalhos .card:hover .circle:before {
+    background: #333333;
+    clip-path: circle(400px at center);
+}
+
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    left: 80%;
+    filter: invert(1);
+}
+
+.card .content {
+    position: relative;
+    color: #CECECE;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.card .content p {
+    margin: 10px 0;
+    font-size: 0.8;
+}
+
+.card .content a {
+    position: relative;
+    color: #9FE4F4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #575757;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+} 
+
+@media (max-width: 991px) {
+    
+}
+/* ----------------------------- fim da section trabalhos-------------------*/
