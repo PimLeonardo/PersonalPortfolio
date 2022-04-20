@@ -11,6 +11,12 @@
     font-family: 'Source Code Pro', monospace;
     scroll-behavior: smooth;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 /* ----------------------------- nav bar ---------------------------*/
 nav {
     display: flex;
@@ -39,14 +45,14 @@ nav {
     padding: 5px;
     font-size: 18px;
     font-family: 'Source Code Pro', monospace;
-    color: #9FE4F4;
+    color: #9fe4f4;
     text-transform: uppercase;
     transition: 0.5s;
 }
 
 .nav-list:hover li a {
     transform: scale(1.5);
-    opacity: .2;
+    opacity: 0.2;
     filter: blur(5px);
 }
 
@@ -84,7 +90,7 @@ nav {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: #9FE4F4;
+    background: #9fe4f4;
     margin: 8px;
     transition: 0.3s;
 }
@@ -139,7 +145,7 @@ nav {
 }
 /* ----------------------------- fim nav bar ---------------------------*/
 /* ----------------------------- section resumo -------------------------------*/
-section{
+section {
     min-height: 100vh;
 }
 
@@ -182,7 +188,7 @@ section{
 .text-perfil {
     margin: 50px;
     text-align: justify;
-    color: #CECECE;
+    color: #cecece;
 }
 
 .logo-text {
@@ -195,12 +201,12 @@ section{
     letter-spacing: 1px;
     background: #575757;
     padding: 2px;
-    color: #9FE4F4;
+    color: #9fe4f4;
 }
 
 .banner .content-box h4 {
     font-size: 1.5em;
-    color: #9FE4F4;
+    color: #9fe4f4;
     font-weight: 300;
 }
 
@@ -228,7 +234,7 @@ section{
 
 .title h2 {
     position: absolute;
-    color: #9FE4F4;
+    color: #9fe4f4;
     font-size: 1.6em;
     font-weight: 700;
     margin: 5px;
@@ -254,11 +260,11 @@ section{
     bottom: -10px;
     width: 600px;
     height: 4px;
-    background: #9FE4F4;
+    background: #9fe4f4;
 }
 
 .sobre {
-    background: #CECECE;
+    background: #cecece;
 }
 
 .sobre .content {
@@ -296,7 +302,7 @@ section{
 .habilidades .title p {
     max-width: 1000px;
     display: inline-block;
-    color: #CECECE;
+    color: #cecece;
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -314,7 +320,7 @@ section{
     margin: 20px;
     transition: 0.5s;
     text-align: center;
-    background: #CECECE;
+    background: #cecece;
     border-radius: 50px;
 }
 
@@ -355,7 +361,7 @@ section{
 /* -----------------------------section trabalhos----------------------------*/
 
 .trabalhos {
-    background: #CECECE;
+    background: #cecece;
 }
 
 .trabalhos .title p {
@@ -373,7 +379,7 @@ section{
     border-radius: 20px;
     display: inline-flex;
     align-items: center;
-    margin: 30px 50px 30px 50px;
+    margin: 6vh;
     transition: 0.5;
 }
 
@@ -394,7 +400,7 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #9FE4F4;
+    background: #9fe4f4;
     clip-path: circle(120px at center);
     transition: 0.5s;
 }
@@ -422,7 +428,7 @@ section{
 
 .card .content {
     position: relative;
-    color: #CECECE;
+    color: #cecece;
     width: 50%;
     left: 20%;
     padding: 20px 20px 20px 40px;
@@ -450,7 +456,7 @@ section{
 
 .card .content a {
     position: relative;
-    color: #9FE4F4;
+    color: #9fe4f4;
     padding: 10px 20px;
     border-radius: 10px;
     background: #575757;
@@ -458,9 +464,205 @@ section{
     display: inline-block;
     text-decoration: none;
     font-weight: 700;
-} 
+}
 
 @media (max-width: 991px) {
-    
 }
 /* ----------------------------- fim da section trabalhos-------------------*/
+/* ----------------------------- section contato----------------------------*/
+
+.contato {
+    background: #333333;
+}
+
+.contato .title p {
+    max-width: 1000px;
+    display: inline-block;
+    color: #cecece;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.contato .contatoForm {
+    display: inline-block;
+    width: 35%;
+    padding: 20px;
+    margin-left: 30%;
+}
+
+.contatoForm .row100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(autofit,minmax(300px,1fr));
+}
+
+.contatoForm .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s;
+}
+
+.contatoForm .row100 .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #9FE4F4;
+}
+
+.contatoForm .row100 .inputBox input,
+.contatoForm .row100 .inputBox.textarea textarea 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.contatoForm .row100 .inputBox .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.contatoForm .row100 .inputBox input:focus + .text,
+.contatoForm .row100 .inputBox input:valid + .text 
+{
+    top: -35px;
+    left: -10px;
+}
+
+.contatoForm .row100 .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #9FE4F4;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.contatoForm .row100 .inputBox input:focus ~ .line,
+.contatoForm .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+} 
+
+.contatoForm .row100 .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.contatoForm .row100 .inputBox.textarea textarea {
+    height: 100%;
+    resize: none;
+}
+
+.contatoForm .row100 .inputBox textarea:focus + .text,
+.contatoForm .row100 .inputBox textarea:valid + .text 
+{
+    top: -35px;
+    left: -10px;
+}
+
+.contatoForm .row100 .inputBox textarea:focus ~ .line,
+.contatoForm .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+} 
+
+input[type="submit"] {
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #9FE4F4;
+    color: #333333;
+    font-size: 18px;
+    border-radius: 2px;
+}
+/* ----------------------------- fim da section contato--------------------*/
+
+.redes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.redes ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.redes ul li{
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+    background: #333333;
+}
+
+.redes ul li span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9FE4F4;
+    transition: 0.5s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 30px !important;
+}
+
+.redes ul li:hover span:nth-child(5) {
+    transform: translate(40px,-40px);
+    opacity: 1;
+}
+
+.redes ul li:hover span:nth-child(4) {
+    transform: translate(30px,-30px);
+    opacity: .8;
+}
+
+.redes ul li:hover span:nth-child(3) {
+    transform: translate(20px,-20px);
+    opacity: .6;
+}
+
+.redes ul li:hover span:nth-child(2) {
+    transform: translate(10px,-10px);
+    opacity: .4;
+}
+
+.redes ul li:hover span:nth-child(1) {
+    transform: translate(0,0);
+    opacity: .2;
+}
