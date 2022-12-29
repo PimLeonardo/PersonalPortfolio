@@ -1,10 +1,11 @@
-/*
-#9FE4F4 - 1 - azul - hover
-#CECECE - 2 - cinza claro - bg2 text1
-#575757 - 3 - cinza - bg nav
-#333333 - 4 - preto - bg1 text2
-#EFBB40 - 5 - amarelo - copy text
-*/
+:root {
+    --main-color: #26d2f8;
+    --bg-text-color: #cecece;
+    --bg-text-color-alternative: #333333;
+    --bg-color-nav: #575757;
+    --copy-text-color: #efbb40;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +13,14 @@
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 /* ----------------------------- nav bar ---------------------------*/
 nav {
@@ -23,7 +28,7 @@ nav {
     position: fixed;
     width: 100%;
     justify-content: center;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .nav-list {
@@ -42,10 +47,11 @@ nav {
     display: block;
     position: relative;
     text-decoration: none;
+    font-weight: 900;
     padding: 5px;
     font-size: 18px;
     font-family: 'Source Code Pro', monospace;
-    color: #9fe4f4;
+    color: var(--main-color);
     text-transform: uppercase;
     transition: 0.5s;
 }
@@ -69,7 +75,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #575757;
+    background: var(--bg-color-nav);
     transition: transform 0.5s;
     transform-origin: right;
     transform: scaleX(0);
@@ -90,7 +96,7 @@ nav {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: #9fe4f4;
+    background: var(--main-color);
     margin: 8px;
     transition: 0.3s;
 }
@@ -100,8 +106,8 @@ nav {
 }
 
 .mobile-menu.active {
-    background: #333333;
-    z-index: 1000;
+    background: var(--bg-text-color-alternative);
+    z-index: 1;
 }
 
 .mobile-menu.active .line1 {
@@ -125,7 +131,7 @@ section {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: #333333;
+    background: var(--bg-text-color-alternative);
 }
 
 .banner .img-sidebar {
@@ -160,7 +166,7 @@ section {
 .text-perfil {
     margin: 50px;
     text-align: justify;
-    color: #cecece;
+    color: var(--bg-text-color);
 }
 
 .logo-text {
@@ -171,14 +177,14 @@ section {
     margin-left: 50px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: #575757;
+    background: var(--bg-color-nav);
     padding: 2px;
-    color: #9fe4f4;
+    color: var(--main-color);
 }
 
 .banner .content-box h4 {
     font-size: 1.5em;
-    color: #9fe4f4;
+    color: var(--main-color);
     font-weight: 300;
 }
 
@@ -206,12 +212,12 @@ section {
 
 .title h2 {
     position: absolute;
-    color: #9fe4f4;
+    color: var(--main-color);
     font-size: 1.6em;
     font-weight: 700;
     margin: 5px;
     padding: 2px;
-    background: #575757;
+    background: var(--bg-color-nav);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -219,7 +225,7 @@ section {
 .sobre .title p {
     max-width: 1000px;
     display: inline-block;
-    color: #333333;
+    color: var(--bg-text-color-alternative);
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -232,11 +238,11 @@ section {
     bottom: -10px;
     width: 600px;
     height: 4px;
-    background: #9fe4f4;
+    background: var(--main-color);
 }
 
 .sobre {
-    background: #cecece;
+    background: var(--bg-text-color);
 }
 
 .sobre .content {
@@ -253,13 +259,12 @@ section {
 .sobre .content .text-box p {
     padding: 15px;
     text-align: justify;
-    color: #333333;
+    color: var(--bg-text-color-alternative);
     margin-left: 40px;
 }
 
 .sobre .content .img-box {
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
 
 .sobre .content .img-box img {
@@ -268,13 +273,13 @@ section {
 /* ----------------------------- fim da section sobre --------------------------*/
 /* ----------------------------- section habilidades --------------------------*/
 .habilidades {
-    background: #333333;
+    background: var(--bg-text-color-alternative);
 }
 
 .habilidades .title p {
     max-width: 1000px;
     display: inline-block;
-    color: #cecece;
+    color: var(--bg-text-color);
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -292,12 +297,12 @@ section {
     margin: 20px;
     transition: 0.5s;
     text-align: center;
-    background: #cecece;
+    background: var(--bg-text-color);
     border-radius: 50px;
 }
 
 .habilidades .content .habilidades-box:hover {
-    background: #575757;
+    background: var(--bg-color-nav);
 }
 
 .habilidades .content .habilidades-box img {
@@ -333,17 +338,17 @@ section {
 /* -----------------------------section trabalhos----------------------------*/
 
 .trabalhos {
-    background: #cecece;
+    background: var(--bg-text-color);
 }
 
-.colunas{
+.colunas {
     column-count: 3;
 }
 
 .trabalhos .title p {
     max-width: 1000px;
     display: inline-block;
-    color: #333333;
+    color: var(--bg-text-color-alternative);
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -376,13 +381,13 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #9fe4f4;
+    background: var(--main-color);
     clip-path: circle(120px at center);
     transition: 0.5s;
 }
 
 .trabalhos .card:hover .circle:before {
-    background: #333333;
+    background: var(--bg-text-color-alternative);
     clip-path: circle(400px at center);
 }
 
@@ -404,7 +409,7 @@ section {
 
 .card .content {
     position: relative;
-    color: #cecece;
+    color: var(--bg-text-color);
     width: 50%;
     left: 20%;
     padding: 20px 20px 20px 40px;
@@ -432,10 +437,10 @@ section {
 
 .card .content a {
     position: relative;
-    color: #9fe4f4;
+    color: var(--main-color);
     padding: 10px 20px;
     border-radius: 10px;
-    background: #575757;
+    background: var(--bg-color-nav);
     margin-top: 10px;
     display: inline-block;
     text-decoration: none;
@@ -448,13 +453,13 @@ section {
 /* ----------------------------- section contato----------------------------*/
 
 .contato {
-    background: #333333;
+    background: var(--bg-text-color-alternative);
 }
 
 .contato .title p {
     max-width: 1000px;
     display: inline-block;
-    color: #cecece;
+    color: var(--bg-text-color);
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -470,7 +475,7 @@ section {
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(autofit,minmax(300px,1fr));
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr));
 }
 
 .contatoForm .row100 .col {
@@ -485,12 +490,11 @@ section {
     position: relative;
     width: 100%;
     height: 40px;
-    color: #9FE4F4;
+    color: var(--main-color);
 }
 
 .contatoForm .row100 .inputBox input,
-.contatoForm .row100 .inputBox.textarea textarea 
-{
+.contatoForm .row100 .inputBox.textarea textarea {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -517,8 +521,7 @@ section {
 }
 
 .contatoForm .row100 .inputBox input:focus + .text,
-.contatoForm .row100 .inputBox input:valid + .text 
-{
+.contatoForm .row100 .inputBox input:valid + .text {
     top: -35px;
     left: -10px;
 }
@@ -529,17 +532,16 @@ section {
     display: block;
     width: 100%;
     height: 2px;
-    background: #9FE4F4;
+    background: var(--main-color);
     transition: 0.5s;
     border-radius: 2px;
     pointer-events: none;
 }
 
 .contatoForm .row100 .inputBox input:focus ~ .line,
-.contatoForm .row100 .inputBox input:valid ~ .line
-{
+.contatoForm .row100 .inputBox input:valid ~ .line {
     height: 100%;
-} 
+}
 
 .contatoForm .row100 .inputBox.textarea {
     position: relative;
@@ -554,25 +556,23 @@ section {
 }
 
 .contatoForm .row100 .inputBox textarea:focus + .text,
-.contatoForm .row100 .inputBox textarea:valid + .text 
-{
+.contatoForm .row100 .inputBox textarea:valid + .text {
     top: -35px;
     left: -10px;
 }
 
 .contatoForm .row100 .inputBox textarea:focus ~ .line,
-.contatoForm .row100 .inputBox textarea:valid ~ .line
-{
+.contatoForm .row100 .inputBox textarea:valid ~ .line {
     height: 100%;
-} 
+}
 
-input[type="submit"] {
+input[type='submit'] {
     border: none;
     padding: 7px 35px;
     cursor: pointer;
     outline: none;
-    background: #9FE4F4;
-    color: #333333;
+    background: var(--main-color);
+    color: var(--bg-text-color-alternative);
     font-size: 18px;
     border-radius: 2px;
 }
@@ -593,14 +593,14 @@ input[type="submit"] {
     display: flex;
 }
 
-.redes ul li{
+.redes ul li {
     position: relative;
     list-style: none;
     width: 60px;
     height: 60px;
     margin: 0 30px;
     transform: rotate(-30deg) skew(25deg);
-    background: #333333;
+    background: var(--bg-text-color-alternative);
 }
 
 .redes ul li span {
@@ -609,50 +609,49 @@ input[type="submit"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #9FE4F4;
+    background: var(--main-color);
     transition: 0.5s;
     display: flex !important;
     align-items: center;
     justify-content: center;
-    color: #333333;
+    color: var(--bg-text-color-alternative);
     font-size: 30px !important;
 }
 
 .redes ul li:hover span:nth-child(5) {
-    transform: translate(40px,-40px);
+    transform: translate(40px, -40px);
     opacity: 1;
 }
 
 .redes ul li:hover span:nth-child(4) {
-    transform: translate(30px,-30px);
-    opacity: .8;
+    transform: translate(30px, -30px);
+    opacity: 0.8;
 }
 
 .redes ul li:hover span:nth-child(3) {
-    transform: translate(20px,-20px);
-    opacity: .6;
+    transform: translate(20px, -20px);
+    opacity: 0.6;
 }
 
 .redes ul li:hover span:nth-child(2) {
-    transform: translate(10px,-10px);
-    opacity: .4;
+    transform: translate(10px, -10px);
+    opacity: 0.4;
 }
 
 .redes ul li:hover span:nth-child(1) {
-    transform: translate(0,0);
-    opacity: .2;
+    transform: translate(0, 0);
+    opacity: 0.2;
 }
 /* ----------------------------- Responsivo --------------------*/
 
-
 @media (max-width: 1700px) {
-    .colunas{
+    .colunas {
         column-count: 2;
     }
 
     .trabalhos .card {
         width: 80%;
-        margin: 10vh;  
+        margin: 10vh;
     }
 }
 
@@ -671,7 +670,7 @@ input[type="submit"] {
         justify-content: space-around;
         transform: translateX(100%);
         transition: trasform 0.3s ease-in;
-        background: #333333;
+        background: var(--bg-text-color-alternative);
     }
 
     .nav-list li a {
@@ -704,7 +703,7 @@ input[type="submit"] {
         flex-direction: column;
     }
 
-    .sobre .content .text-box p{
+    .sobre .content .text-box p {
         margin-left: 0;
     }
 
@@ -715,7 +714,7 @@ input[type="submit"] {
     .sobre .title p {
         margin-bottom: 0px;
     }
-    
+
     .sobre .content .img-box img {
         margin-bottom: 20px;
     }
@@ -724,7 +723,7 @@ input[type="submit"] {
         width: 80%;
     }
 
-    .colunas{
+    .colunas {
         column-count: 1;
     }
 }
