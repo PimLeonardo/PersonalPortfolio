@@ -588,7 +588,7 @@ input[type='submit'] {
 
 .redes ul {
     position: relative;
-    margin: 0;
+    margin-bottom: 20px;
     padding: 0;
     display: flex;
 }
