@@ -223,11 +223,10 @@ section {
 }
 
 .sobre .title p {
-    max-width: 1000px;
     display: inline-block;
     color: var(--bg-text-color-alternative);
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-left: 10px;
 }
 
 .title h2::before {
@@ -257,18 +256,15 @@ section {
 }
 
 .sobre .content .text-box p {
-    padding: 15px;
+    padding: 85px;
     text-align: justify;
     color: var(--bg-text-color-alternative);
     margin-left: 40px;
 }
 
-.sobre .content .img-box {
-    margin: auto;
-}
-
 .sobre .content .img-box img {
-    max-width: 100%;
+    max-width: 95%;
+    border-radius: 8px;
 }
 /* ----------------------------- fim da section sobre --------------------------*/
 /* ----------------------------- section habilidades --------------------------*/
@@ -277,11 +273,10 @@ section {
 }
 
 .habilidades .title p {
-    max-width: 1000px;
     display: inline-block;
     color: var(--bg-text-color);
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-left: 10px;
 }
 
 .habilidades .content {
@@ -289,6 +284,7 @@ section {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 55px;
 }
 
 .habilidades .content .habilidades-box {
@@ -328,6 +324,7 @@ section {
 
 .habilidades .content .habilidades-box p {
     margin: 0;
+    text-align: justify;
     transition: 0.5s;
 }
 
@@ -346,11 +343,10 @@ section {
 }
 
 .trabalhos .title p {
-    max-width: 1000px;
     display: inline-block;
     color: var(--bg-text-color-alternative);
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-left: 10px;
 }
 
 .trabalhos .card {
@@ -433,6 +429,7 @@ section {
 .card .content p {
     margin: 10px 0;
     font-size: 0.8;
+    text-align: justify;
 }
 
 .card .content a {
@@ -457,11 +454,10 @@ section {
 }
 
 .contato .title p {
-    max-width: 1000px;
     display: inline-block;
     color: var(--bg-text-color);
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-left: 10px;
 }
 
 .contato .contatoForm {
@@ -715,16 +711,19 @@ input[type='submit'] {
         margin-bottom: 0px;
     }
 
-    .sobre .content .img-box img {
-        margin-bottom: 20px;
-    }
-
     .trabalhos .card {
         width: 80%;
     }
 
     .colunas {
         column-count: 1;
+    }
+
+    .sobre .content .img-box img {
+        max-width: 80%;
+        margin-left: 50%;
+        margin-bottom: 18px;
+        transform: translate(-50%, 0);
     }
 }
 
