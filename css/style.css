@@ -22,6 +22,19 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 13px;
+}
 /* ----------------------------- nav bar ---------------------------*/
 nav {
     display: flex;
@@ -352,7 +365,7 @@ section {
 .trabalhos .card {
     position: relative;
     width: 500px;
-    height: 300px;
+    height: 330px;
     border-radius: 20px;
     display: inline-flex;
     align-items: center;
@@ -646,8 +659,14 @@ input[type='submit'] {
     }
 
     .trabalhos .card {
-        width: 80%;
-        margin: 10vh;
+        width: 90%;
+        margin: 12px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .sobre .content .img-box img {
+        margin-top: 25vh;
     }
 }
 
@@ -712,7 +731,8 @@ input[type='submit'] {
     }
 
     .trabalhos .card {
-        width: 80%;
+        width: 88%;
+        margin-left: 5vh;
     }
 
     .colunas {
@@ -720,16 +740,27 @@ input[type='submit'] {
     }
 
     .sobre .content .img-box img {
-        max-width: 80%;
-        margin-left: 50%;
-        margin-bottom: 18px;
-        transform: translate(-50%, 0);
+        max-width: 70%;
+        margin: 0;
+    }
+
+    .sobre .content .img-box {
+        display: flex;
+        margin-bottom: 23px;
+        justify-content: center;
     }
 }
 
 @media (max-width: 650px) {
     .redes ul {
         width: 100%;
+        margin: 2vh;
+    }
+
+    .redes ul li {
+        width: 40px;
+        height: 40px;
+        margin: auto;
     }
 
     .trabalhos .card {
@@ -737,5 +768,27 @@ input[type='submit'] {
         margin-bottom: 10vh;
         width: 100%;
         height: 120%;
+    }
+
+    .banner .img-sidebar {
+        width: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .card .content {
+        width: 60%;
+        margin: auto;
+        left: 0;
+    }
+
+    .card:hover img {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .card .content {
+        left: 0;
     }
 }
